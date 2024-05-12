@@ -5,8 +5,8 @@ WORKDIR /minecraft
 RUN apt-get update && apt-get upgrade -y && apt-get install -y wget nano python3 python3-pip screen git && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Insérer ci-dessous le lien de la version du serveur minecraft que vous désiez
-#RUN wget https://api.papermc.io/v2/projects/paper/versions/1.20.4/builds/464/downloads/paper-1.20.4-464.jar -O papermc.jar
-RUN wget https://api.papermc.io/v2/projects/paper/versions/1.20.1/builds/196/downloads/paper-1.20.1-196.jar -O papermc.jar
+RUN wget https://api.papermc.io/v2/projects/paper/versions/1.20.4/builds/464/downloads/paper-1.20.4-464.jar -O papermc.jar
+# RUN wget https://api.papermc.io/v2/projects/paper/versions/1.20.1/builds/196/downloads/paper-1.20.1-196.jar -O papermc.jar
 # https://maven.neoforged.net/releases/net/neoforged/forge/1.20.1-47.1.105/forge-1.20.1-47.1.105-installer.jar -O papermc.jar
 # RUN wget https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.1.0/forge-1.20.1-47.1.0-installer.jar -O papermc.jar
 
@@ -23,7 +23,7 @@ RUN wget -O /minecraft/mods/Create.jar https://mediafilez.forgecdn.net/files/483
 RUN echo "eula=true" > eula.txt
 
 # Minecraft server port (si vous voulez ajouter plusieurs serveurs en parralèle, choisissez des ports différents pour chacun (25566, 25567,...)
-EXPOSE 25567
+EXPOSE 25568
 
 COPY start-minecraft.sh /minecraft/
 COPY server.properties /minecraft/server.properties
