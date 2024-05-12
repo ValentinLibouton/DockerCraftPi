@@ -7,6 +7,7 @@ Une interface graphique permet de commander le Raspberry à distance pour:
 3. Extraire la sauvegarde du jeu sur l'ordinateur
 4. Redémarrer le Raspberry
 5. Éteindre le raspberry
+![Remote Control](./images/remote_control.png)
 
 ## 1. Installer Raspbian Lite sur le raspberry
 
